@@ -19,6 +19,7 @@ body{
 .home-icon {
   font-size: 30px; /* Adjust the size as needed */
 }
+
 .navbar {
   color: white;
   padding: 5px ;
@@ -26,10 +27,31 @@ body{
   justify-content: space-between;
 }
 
-.navbar-left, .navbar-right {
+.navbar-left, .navbar-right, .navbar-center {
   display: flex;
   align-items: center;
 }
+
+.mode-btn {
+  background-color: #fff;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.mode-btn i {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.practice-mode.active, .exam-mode.active {
+  background-color: green;
+  color: white;
+}
+
 
 .logout-btn {
   border: none;
@@ -51,22 +73,22 @@ body{
 
 .container{
   display: flex;
-  width: 100%;
   gap: 10px;
-  padding: 10px;
+  max-height: 60%;
+  width: 100%;
+  padding: 0px;
   max-width: 1050px;
 }
 section{
   background: #fff;
-  border-radius: 7px;
+  border-radius: 10pxpx;
 }
 .tools-board{
   width: 210px;
+  max-width: 35%;
   padding: 15px 22px 0;
 }
-.tools-board .row{
-  margin-bottom: 20px;
-}
+
 .row .options{
   list-style: none;
   margin: 10px 0 0 5px;
@@ -98,12 +120,11 @@ section{
 }
 .option #size-slider{
   width: 100%;
-  height: 5px;
-  margin-top: 10px;
+  height: 15px;
 }
 .colors .options{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .colors .option{
   height: 20px;
@@ -177,7 +198,10 @@ section{
   overflow: hidden;
 }
 .drawing-board canvas{
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border-radius: 15px;
+  box-shadow: 0 0 20px 10px #314f31; 
+  
   width: 100%;
   height: 100%;
 }
@@ -216,3 +240,69 @@ section{
   background-color: green; /* Darker background color on hover */
 }
 
+#submitDrawing{
+  margin-top: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  background-color: #007bff;
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 5px;
+ 
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Set the width of the modal */
+  height: auto; /* Remove fixed height */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.modal-header h2 {
+  margin-top: 0;
+}
+
+.modal-body {
+  padding-bottom: 20px; /* Add padding at the bottom */
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+/* Increase button size */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Close button style */
+#closeModalBtn {
+  background-color: #ccc;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}

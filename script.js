@@ -1,3 +1,4 @@
+
 const canvas = document.querySelector("canvas"),
 toolBtns = document.querySelectorAll(".tool"),
 fillColor = document.querySelector("#fill-color"),
@@ -12,8 +13,12 @@ ctx = canvas.getContext("2d");
 let prevMouseX, prevMouseY, snapshot,
 isDrawing = false,
 selectedTool = "brush",
-brushWidth = 5,
+brushWidth = 15,
 selectedColor = "#000";
+
+
+
+
 
 const setCanvasBackground = () => {
     // setting whole canvas background to white, so the downloaded img background will be white
@@ -128,3 +133,4 @@ saveImg.addEventListener("click", () => {
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing);
 canvas.addEventListener("mouseup", () => isDrawing = false);
+

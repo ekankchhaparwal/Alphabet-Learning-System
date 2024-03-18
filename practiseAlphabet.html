@@ -5,8 +5,10 @@
     <title>Drawing App JavaScript</title>
     <link rel="stylesheet" href="css/practiseAlphabet.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
   <body>
     <div>
@@ -49,7 +51,7 @@
                 <span>Eraser</span>
               </li>
               <li class="option">
-                <input type="range" id="size-slider" min="1" max="30" value="5">
+                <input type="range" id="size-slider" min="1" max="30" value="15">
               </li>
             </ul>
           </div>
@@ -66,12 +68,15 @@
             </ul>
           </div>
           <div class="row buttons">
-            <button class="clear-canvas">Clear Wrokspace</button>
+            <button class="clear-canvas">Clear Workspace</button>
             <button class="save-img">Save As Image</button>
           </div>
         </section>
         <section class="drawing-board">
-          <canvas></canvas>
+          <div style="width: 100%; height: 90%; padding: 5PX; padding-top: 10px;">
+            <canvas></canvas>
+          </div>
+          <center><button id="submitDrawing" >SUBMIT</button></center>
         </section>
         <section class="drawing-board">
           <div style="padding: 5px; align-items: center; display: flex; justify-content: space-between; flex-direction: column;">
@@ -79,15 +84,51 @@
           <p id="letter">A</p>
           </div>
           <div id="buttons" >
-            <button class="button" onclick="changeLetter(-1)">Prev</button>
+            <button class="button" onclick=changeLetter(-1)>Prev</button>
             <button class="button" onclick="changeLetter(1)">Next</button>
           </div>
         </section>
       </div>
     </div>
+
+    <div id="popupModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle"></h2>
+        </div>
+        <div class="modal-body">
+          <p id="modalMessage"></p>
+        </div>
+        <div class="modal-footer">
+          <button id="closeModalBtn">Close</button>
+        </div>
+      </div>
+    </div>
+
   </body>
 
   <script>
+
+const speak = (text) => {
+    const synth = window.speechSynthesis;
+    voices = synth.getVoices();
+    console.log(voices);
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.voice = voices[8]
+
+    utterance.rate = 1.0;
+
+    synth.speak(utterance);
+};
+
+
+    document.getElementById("submitDrawing").addEventListener("click", async function() {
+    const canvas = document.querySelector("canvas");
+    var dataUrl = canvas.toDataURL("image/png");
+    const blob = await dataURLToBlob(dataUrl);
+    recognizeText(blob);
+    });
+
     let currentLetterIndex = 0;
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   
@@ -100,5 +141,62 @@
       }
       document.getElementById('letter').innerText = letters[currentLetterIndex];
     }
+
+    function convertAndRecognize() {
+      const canvas = document.querySelector("canvas");
+      var dataUrl = canvas.toDataURL("image/png");
+      // const blob = dataURLToBlob(dataUrl);
+      recognizeText(dataUrl);
+    
+    }
+
+    function renderImage(dataUrl) {
+    var img = document.getElementById("renderedImage");
+    img.src = dataUrl;
+    }
+
+    function dataURLToBlob(dataUrl) {
+    var byteString = atob(dataUrl.split(',')[1]);
+    var mimeString = dataUrl.split(',')[0].split(':')[1].split(';')[0];
+    var ab = new ArrayBuffer(byteString.length);
+    var ia = new Uint8Array(ab);
+    for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([ab], { type: mimeString });
+  }
+
+  async function recognizeText(dataUrl) {
+    const worker = await Tesseract.createWorker('eng');
+    const ret = await worker.recognize(dataUrl);
+    console.log(ret.data.text);
+    const text = ret.data.text;
+
+    await worker.terminate();
+    const letter = document.getElementById("letter").innerText.trim().toUpperCase();
+    console.log(letter.length);
+    console.log(text.length);
+    let title, message;
+    if (text[0] == letter) {
+        title = 'Very good!';
+        message = 'The recognized letter matches the letter in the paragraph.';
+        speak('Excellent! You are doing great!');
+    } else {
+        title = 'Try again.';
+        message = 'The recognized letter does not match the letter in the paragraph.';
+        speak('try again you can do it');
+    }
+    
+    // Show modal
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalMessage').innerText = message;
+    document.getElementById('popupModal').style.display = 'block';
+
+// Close modal button
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+    document.getElementById('popupModal').style.display = 'none';
+});
+
+}
   </script>
 </html>
