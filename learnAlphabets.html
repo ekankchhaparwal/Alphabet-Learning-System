@@ -46,23 +46,7 @@
 </body>
 
 <script>
-    function speakText() {
-        var text = document.getElementById('text-to-speak').textContent;
-        var utterance = new SpeechSynthesisUtterance(text);
-        utterance.rate = 0.50; // Increase speed by 50%
-        var icon = document.getElementById('play-icon');
-        icon.classList.remove('material-icons');
-        icon.classList.add('material-icons');
-        icon.textContent = 'pause';
-
-        speechSynthesis.speak(utterance);
-
-        utterance.onend = function() {
-            icon.classList.remove('material-icons-outlined');
-            icon.classList.add('material-icons');
-            icon.textContent = 'play_arrow';
-        };
-    }
+    
 
     let index = 0;
 const images = ['assets/A.jpg', 'assets/B.jpg', 'assets/C.jpg', 'assets/D.jpg', 'assets/E.jpg'];
@@ -91,7 +75,9 @@ function updateContent() {
 function speakText() {
         var text = document.getElementById('text-to-speak').textContent;
         var utterance = new SpeechSynthesisUtterance(text);
-        // Adjust the rate (speed) here, for example:
+        const synth = window.speechSynthesis;
+        voices = synth.getVoices();
+        utterance.voice = voices[8]
         utterance.rate = 0.5; // Increase speed by 50%
 
         // Change icon to pause

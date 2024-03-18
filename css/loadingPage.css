@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #a3eef8; 
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.landing-content {
+    text-align: center;
+}
+
+.landing-image {
+    width: 350px; /* Adjust image width as needed */
+    /* display: inline-block; */
+    vertical-align: middle;
+}
+
+.landing-title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    margin: 20px 0;
+    /* display: inline-block;  */
+    vertical-align: middle;
+}
+
+.landing-button {
+    margin-top: 80px;
+    padding: 10px 20px;
+    font-size: 25px;
+    background-color: #332623; /* Set your desired button background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.landing-button:hover {
+    background-color: #0056b3; /* Set your desired button hover color */
+}
+/* Existing CSS remains unchanged */
+
+.button-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+}

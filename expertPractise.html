@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Learning System</title>
+    <script src="https://www.chenyuho.com/project/handwritingjs/handwriting.canvas.js"></script>
+    <!-- <link rel="stylesheet" href="/2.css"> -->
+    <link rel="stylesheet" href="css/expertPractise.css">
+    <style>
+        .container-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container {
+            width: 80%; /* Adjust as needed */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .navigation img {
+            height: 60px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="main.html">Home</a>
+        <a href="mailto:harshasridhar123@gmail.com">Support</a>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="navigation">
+            <img src="/images/left arrow.png" alt="Previous" id="prev-img">
+            <img src="/images/right arrow.png" alt="Next" id="next-img">
+        </div>
+
+        <div class="container">
+            <div class="alphabet-display">
+                <img id="alphabet-img" src="images/a.png" width="340" alt="A">
+                <p id="pronunciation">Pronunciation: A as in Apple</p>
+            </div>
+            <div class="drawing-area">
+                <canvas id="canvas" width="800" height="400" style="border: 2px solid;"></canvas>
+                <div class="controls">
+                    <button onclick="canvas.recognize()">Recognize</button>
+                    <button onclick="canvas.erase()" id="clr-btn">Clear</button>
+                    <button id="check-btn">Check</button>
+                    <!-- <button onclick="canvas.undo()" id="undo-btn">Undo</button> -->
+                    <!-- <button onclick="canvas.redo()" id="redo-btn">Redo</button> -->
+                    <!-- <button id="eraser-btn">Eraser</button> -->
+                    <button id="pen-btn">Pen</button>
+                    <!-- <button id="speak-btn">Speak</button> -->
+                    <img height="60px" src="/images/image.png" alt="Speak" id="speak-img" onclick="speakPronunciation()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="result">Result: <span id='result'></span></div>
+<div class="outcome">Outcome: <span id="outcome"></span></div>
+
+
+</div>
+
+    <!-- Cartoons at the bottom -->
+    <div class="cartoons">
+        <img src="/images/bear left.png" alt="Cartoon 1" class="cartoon">
+        <img src="/images/flaming left second.png" alt="Cartoon 2" class="cartoon">
+        <img src="/images/kid right second.png" alt="Cartoon 3" class="cartoon">
+        <img src="/images/kid right.png" alt="Cartoon 4" class="cartoon">
+    </div>
+
+    <script src="/script2.js"></script>
+</body>
+
+</html>

@@ -9,6 +9,7 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
+        background-color: rgb(127, 226, 253);
     }
 
     .navbar {
@@ -71,14 +72,15 @@
     }
 
     .image-container {
-        margin-top: 20px;
+        /* margin-top: 20px; */
         display: flex;
         justify-content: space-around;
     }
 
     .image-container img {
-        width: 30%;
-        height: 39%;
+        width: 25%;
+        height: 25%;
+        /* height: 39%; */
         margin-right: 20px;
         transition: transform 0.3s ease;
     }
@@ -89,6 +91,7 @@
 </style>
 </head>
 <body>
+    <audio id="bgMusic" src="sons/happymusic.mp3" autoplay style="display: none;"></audio>
 
 <div class="navbar">
     <a class="navbar-brand" href="#">ABC Fun Online</a>
@@ -101,14 +104,15 @@
         <i class="fas fa-sign-out-alt"></i> Logout
       </button>
 </div>
+<!-- <hr> -->
 
 <div class="image-container">
     <img src="assets/module1.png" alt="Image 1" onclick="window.location.href='learnAlphabets.html'">
-    <img src="assets/module2.png" alt="Image 2" style="padding-top: 20px;" onclick="window.location.href='practiseAlphabet.html'">
+    <img src="assets/module2.png" alt="Image 2" style="padding-top: 20px;" onclick="window.location.href='mode.html'">
 </div>
 <div class="image-container">
-    <img src="assets/module1.png" alt="Image 1" onclick="window.location.href='games.html'">
-    <img src="assets/module2.png" alt="Image 2" style="padding-top: 20px;" onclick="window.location.href='canvas.html'">
+    <img src="assets/letterland.png" alt="Image 1" onclick="window.location.href='games.html'">
+    <img src="assets/scribble.png" alt="Image 2" style="padding-top: 20px;" onclick="window.location.href='practiseAlphabet.html'">
 </div>
 
 </body>

@@ -701,21 +701,6 @@ function textToSpeech(text) {
 
         // Set pitch to a high value (between 0 and 2)
         utterance.pitch = 2;
-		
-
-        // Get the list of available voices
-        var voices = synth.getVoices();
-
-        // Find a female voice (you may need to adjust this logic)
-        var femaleVoice = voices.find(function(voice) {
-            return voice.name.toLowerCase().includes('female');
-        });
-
-        if (femaleVoice) {
-            // Set voice to a female voice
-            utterance.voice = femaleVoice;
-        }
-
         // Speak the utterance
         synth.speak(utterance);
     } else {

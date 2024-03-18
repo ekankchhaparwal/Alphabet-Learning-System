@@ -112,7 +112,6 @@
 const speak = (text) => {
     const synth = window.speechSynthesis;
     voices = synth.getVoices();
-    console.log(voices);
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.voice = voices[8]
 
@@ -180,11 +179,11 @@ const speak = (text) => {
     if (text[0] == letter) {
         title = 'Very good!';
         message = 'The recognized letter matches the letter in the paragraph.';
-        speak('Excellent! You are doing great!');
+        speak('Excellent, You are doing great');
     } else {
         title = 'Try again.';
         message = 'The recognized letter does not match the letter in the paragraph.';
-        speak('try again you can do it');
+        speak('Try again you can do it');
     }
     
     // Show modal

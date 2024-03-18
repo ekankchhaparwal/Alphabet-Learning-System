@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshara Abhayas</title>
+    <link rel="stylesheet" href="/css/loadingPage.css">
+</head>
+
+<body>
+    <audio id="bgMusic" src="sons/happymusic.mp3" autoplay loop style="display: none;"></audio>
+
+
+    <div class="container">
+        <div class="landing-content">
+            <img src="/images/Kids in Balloon.png" alt="Image" class="landing-image">
+            <h1 class="landing-title">The Alphabet Learning System</h1>
+            <div class="button-container">
+                <button class="landing-button" onclick="location.href='/main.html'">Start Learning</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    function playBackgroundMusic() {
+        var bgMusic = document.getElementById('bgMusic');
+        // bgMusic.volume = 0.5;
+        bgMusic.play();
+
+        document.removeEventListener('click', playBackgroundMusic);
+    }
+
+    document.addEventListener('click', playBackgroundMusic);
+</script>
+
+</html>

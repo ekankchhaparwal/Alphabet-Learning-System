@@ -1,0 +1,149 @@
+.navbar {
+    background-color: transparent;
+    overflow: hidden;
+    text-align: center; 
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .navbar a {
+    display: inline-block;
+    color: #87A922;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #FCDC2A; /* Light pink button */
+    /* background-color: pink; Set the background color to pink */
+    margin: 0 5px; /* Add margin between buttons for spacing */
+    border-radius: 10px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    
+  }
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2; 
+    background-image: url('images/image\ 8\ \(1\).png');
+    background-size: contain;
+    background-position: center;
+    min-height: 100vh; 
+  }
+  
+  .container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-image: url('images/drawing\ area\ bg.png');
+    background-position:center;
+    background-size: cover;   
+  
+  }
+  
+  .alphabet-display {
+    text-align: center;
+    margin-right: 20px;
+  }
+  
+  .drawing-area {
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .drawing-area canvas {
+    cursor: url('/images/pen.png'), auto;
+  }
+  .controls{
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+  canvas {
+    cursor: crosshair;
+    border: 2px solid #333;
+    border-radius: 10px;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  #prev-img{
+    cursor: pointer;
+    /* z-index: 1; */
+  
+  }
+  #next-img{
+    position: absolute;
+    cursor: pointer;
+    /* z-index: 1; */
+    left: 1434px;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #FCDC2A; /* Light pink button */
+    color: #87A922;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  button:hover {
+    background-color: #FFC374; /* Lighter pink on hover */
+  }
+  
+  .result {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .result,
+  .outcome {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 20px;
+      margin-top: 10px;
+  }
+  
+  .result {
+      color: #F6FDC3; /* Green color for result */
+  }
+  
+  .outcome {
+    position: absolute;
+    left: 700px;
+      color: #F6FDC3; /* Red color for outcome */
+  }
+  
+  #speak-img{
+  
+    cursor: pointer;
+  }
+  /* CSS for the cartoons at the bottom */
+  .cartoons {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly along the main axis */
+    align-items: baseline; /* Center items vertically */
+  }
+  
+  .cartoon {
+    width: 150px; /* Set the width to a specific value */
+    height: auto; /* Automatically adjust the height based on the aspect ratio */
+  }
+  

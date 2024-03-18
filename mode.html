@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mode Selection</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    /* background-image: url('images/ab.jpg'); */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(127, 226, 253);
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    padding: 15px;
+    margin-top: -50px; /* Adjust top margin if necessary */
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid transparent; /* Blue border */
+    border-radius: 5px;
+    background-color: rgb(63, 63, 235); /* Blue background */
+    color: #fff; /* White text */
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+    color: #fff;
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .home-btn {
+    margin-left: 10px;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<a href="main.html" class="material-icons home-btn">home</a>
+<div class="container">
+  <h1>Select Mode for Practising Alphabet</h1>
+  <button class="btn" onclick="window.location.href='canvas.html'">Simple Mode</button>
+  <button class="btn" onclick="window.location.href='expertPractise.html'">Expert Mode</button>
+</div>
+</body>
+</html>
