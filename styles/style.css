@@ -1,0 +1,205 @@
+@import url("tri.css");
+@import url("menus.css");
+
+.lettre{
+margin: 5px 5px ; 
+display:inline-block;
+text-align: center;
+height: 160px;
+width:160px;
+border:1px solid black;
+font-size: 8em;
+background-image: linear-gradient(top, rgb(235,235,235) 0%, rgb(6,0,189) 69%);
+background-image: -o-linear-gradient(top, rgb(235,235,235) 0%, rgb(6,0,189) 69%);
+background-image: -moz-linear-gradient(top, rgb(235,235,235) 0%, rgb(6,0,189) 69%);
+background-image: -webkit-linear-gradient(top, rgb(235,235,235) 0%, rgb(6,0,189) 69%);
+background-image: -ms-linear-gradient(top, rgb(235,235,235) 0%, rgb(6,0,189) 69%);
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, rgb(235,235,235)),
+	color-stop(0.69, rgb(6,0,189))
+);
+color:white !important;
+text-decoration: none;
+}
+
+#letter
+{
+z-index:2;
+position:relative;
+height: 230px;
+width:230px;
+font-size: 12em;
+display:inline-block;
+margin:0px;
+padding:0px;
+border: 2px solid #ccc;
+	background: 			#eee;
+	font-weight: bold;
+	color: 					#3a3a3a;
+	text-shadow: 0 1px 0 #fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff ), to( #f1f1f1 ));
+	background-image: -webkit-linear-gradient( #fff , #f1f1f1 );
+	background-image:    -moz-linear-gradient( #fff , #f1f1f1 );
+	background-image:     -ms-linear-gradient( #fff , #f1f1f1 );
+	background-image:      -o-linear-gradient( #fff , #f1f1f1 );
+	background-image:         linear-gradient( #fff , #f1f1f1 );	
+	-moz-box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0px 1px 4px	rgba(0,0,0,.3);
+	box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 0.1em;
+	text-decoration:none;
+}
+
+#container { 
+	position: relative; 
+	text-align:center;
+    width: 100%;
+    height: 235px;
+    position: relative;
+}
+#imageView 
+{
+	position:absolute;
+	z-index:1;
+}
+#imageTemp 
+{ 
+	position:absolute;
+	left:50%;
+	margin-left:-116px;
+	z-index:10;
+}
+#points
+{
+	text-align:center;
+	margin:0px;
+	padding:0px;
+}
+
+.min_jeu2{
+	margin: 5px 5px ; 
+	display:inline-block;
+	text-align: center;
+	height: 100px;
+	width:100px;
+	font-size: 5em;
+	border: 2px solid 		#ccc /*{c-bup-border}*/;
+	background: 			#eee /*{c-bup-background-color}*/;
+	font-weight: bold;
+	color: 					#3a3a3a /*{c-bup-color}*/;
+	text-shadow: 0 /*{c-bup-shadow-x}*/ 1px /*{c-bup-shadow-y}*/ 0 /*{c-bup-shadow-radius}*/ #fff /*{c-bup-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff /*{c-bup-background-start}*/), to( #f1f1f1 /*{c-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/);	
+	-moz-box-shadow: 0px 1px 4px /*{global-box-shadow-size}*/ 			rgba(0,0,0,.3) /*{global-box-shadow-color}*/;
+	-webkit-box-shadow: 0px 1px 4px /*{global-box-shadow-size}*/ 		rgba(0,0,0,.3) /*{global-box-shadow-color}*/;
+	box-shadow: 0px 1px 4px /*{global-box-shadow-size}*/ 				rgba(0,0,0,.3) /*{global-box-shadow-color}*/;
+	-moz-border-radius: 1em /*{global-radii-buttons}*/;
+	-webkit-border-radius: 1em /*{global-radii-buttons}*/;
+	border-radius: 0.1em /*{global-radii-buttons}*/;
+	text-decoration: none;
+}
+
+.minuscules{
+	margin: 5px 5px ; 
+	display:inline-block;
+	text-align: center;
+	height: 70px;
+	width:70px;
+	font-size: 3em;
+	border: 2px solid 		#ccc /*{c-bup-border}*/;
+	background: 			#eee /*{c-bup-background-color}*/;
+	font-weight: bold;
+	color: 					#3a3a3a /*{c-bup-color}*/;
+	text-shadow: 0 /*{c-bup-shadow-x}*/ 1px /*{c-bup-shadow-y}*/ 0 /*{c-bup-shadow-radius}*/ #fff /*{c-bup-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff /*{c-bup-background-start}*/), to( #f1f1f1 /*{c-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #fff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/);	
+	-moz-box-shadow: 0px 1px 4px /*{global-box-shadow-size}*/ 			rgba(0,0,0,.3) /*{global-box-shadow-color}*/;
+	-webkit-box-shadow: 0px 1px 4px /*{global-box-shadow-size}*/ 		rgba(0,0,0,.3) /*{global-box-shadow-color}*/;
+	box-shadow: 0px 1px 4px /*{global-box-shadow-size}*/ 				rgba(0,0,0,.3) /*{global-box-shadow-color}*/;
+	-moz-border-radius: 1em /*{global-radii-buttons}*/;
+	-webkit-border-radius: 1em /*{global-radii-buttons}*/;
+	border-radius: 0.1em /*{global-radii-buttons}*/;
+}
+#list1{
+	width: 90%;
+	text-align: center;
+	margin:auto;
+}
+#test{
+	width:90%;
+	margin: auto;
+	text-align: center;
+}
+
+#maj{
+	width:180px;
+	height: 180px;
+	font-size: 8em;
+	margin-top: 0px;
+}
+
+#min{
+	width:120px;
+	height: 120px;
+	font-size: 5em;
+	margin-top: 0px;
+}
+
+.but{
+	width: 200px;
+	height: 140px;
+	margin: 0;
+}
+
+.bloc_center {
+	margin: auto;
+	text-align: center;
+}
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Style for the navigation bar */
+  .navbar {
+    background-color: skyblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+	height: 100px;
+  }
+
+  /* Style for the home icon */
+  .home-icon {
+	flex-grow: 1;
+    font-size: 48px;
+    cursor: pointer;
+  }
+
+  /* Style for the title */
+  .title {
+	flex-grow: 1;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  h3 {
+	margin: 20px 10px;
+  }
