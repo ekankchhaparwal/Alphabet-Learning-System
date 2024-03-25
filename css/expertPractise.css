@@ -1,20 +1,21 @@
 .navbar {
+
+  margin: 10px;
     background-color: transparent;
     overflow: hidden;
     text-align: center; 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   
   .navbar a {
     display: inline-block;
-    color: #87A922;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    background-color: #FCDC2A; /* Light pink button */
-    /* background-color: pink; Set the background color to pink */
-    margin: 0 5px; /* Add margin between buttons for spacing */
+    background-color: blue; 
+    margin: 0 5px; 
     border-radius: 10px;
   }
   
@@ -27,8 +28,8 @@
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffe6f2; 
-    background-image: url('images/image\ 8\ \(1\).png');
+    background-color: #a3eef8; 
+    /* background-image: url('images/image\ 8\ \(1\).png'); */
     background-size: contain;
     background-position: center;
     min-height: 100vh; 
@@ -90,8 +91,8 @@
   button {
     padding: 10px 20px;
     margin: 0 10px;
-    background-color: #FCDC2A; /* Light pink button */
-    color: #87A922;
+    background-color: blue; /* Light pink button */
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -118,13 +119,13 @@
   }
   
   .result {
-      color: #F6FDC3; /* Green color for result */
+      color: black; 
   }
   
   .outcome {
     position: absolute;
     left: 700px;
-      color: #F6FDC3; /* Red color for outcome */
+      color: black; 
   }
   
   #speak-img{

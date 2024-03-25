@@ -56,9 +56,6 @@
                     <button onclick="canvas.recognize()">Recognize</button>
                     <button onclick="canvas.erase()" id="clr-btn">Clear</button>
                     <button id="check-btn">Check</button>
-                    <!-- <button onclick="canvas.undo()" id="undo-btn">Undo</button> -->
-                    <!-- <button onclick="canvas.redo()" id="redo-btn">Redo</button> -->
-                    <!-- <button id="eraser-btn">Eraser</button> -->
                     <button id="pen-btn">Pen</button>
                     <!-- <button id="speak-btn">Speak</button> -->
                     <img height="60px" src="/images/image.png" alt="Speak" id="speak-img" onclick="speakPronunciation()">
@@ -67,19 +64,15 @@
         </div>
     </div>
 
-    <div class="result">Result: <span id='result'></span></div>
-<div class="outcome">Outcome: <span id="outcome"></span></div>
+    <div >
+        <div class="result">Result: <span id='result'></span></div>
+    <div class="outcome">Outcome: <span id="outcome"></span></div>
+    </div>
 
 
 </div>
 
-    <!-- Cartoons at the bottom -->
-    <div class="cartoons">
-        <img src="/images/bear left.png" alt="Cartoon 1" class="cartoon">
-        <img src="/images/flaming left second.png" alt="Cartoon 2" class="cartoon">
-        <img src="/images/kid right second.png" alt="Cartoon 3" class="cartoon">
-        <img src="/images/kid right.png" alt="Cartoon 4" class="cartoon">
-    </div>
+    
 
     <script src="/script2.js"></script>
 </body>

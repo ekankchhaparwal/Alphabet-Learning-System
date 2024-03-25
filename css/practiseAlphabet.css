@@ -7,7 +7,8 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  background: url(/assets/paper.jpg);
+  /* background: url(/assets/paper.jpg); */
+  background-color: #a3eef8;
 }
 .body{
   display: flex;
@@ -17,7 +18,8 @@ body{
 }
 
 .home-icon {
-  font-size: 30px; /* Adjust the size as needed */
+  color: wheat;
+  font-size: 40px; /* Adjust the size as needed */
 }
 
 .navbar {
@@ -58,7 +60,7 @@ body{
   border-radius: 5px;
   padding: 5px 20px;
   font-size: 17px;
-  background-color: #4CAF50; 
+  background-color: purple; 
   color: white; /* White text color */
   transition: background-color 0.3s ease;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
